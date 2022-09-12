@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+.imageAndBanner{
+    flex:1;
+    background-image:url("./images/background.jpg");
+    height: 100vh;
+}
+
+.signupForm{
+    flex:2;
+}
