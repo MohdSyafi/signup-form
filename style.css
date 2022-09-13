@@ -11,6 +11,11 @@ body{
     width: 100vw;
 }
 
+.imageAndBanner{
+    flex:2;
+    background-image:url("./images/background.jpg");
+}
+
 .container{
     position: relative;
     top: 20vh;
@@ -23,20 +28,41 @@ body{
     padding:1vh;
 
 }
+
 .container img{
     height: 10vh;
 }
+
 .container span{
     font-family: Norse-Bold;
     font-size: 12vh;
     color: white;
 }
 
-.imageAndBanner{
-    flex:2;
-    background-image:url("./images/background.jpg");
+.signupContainer{
+    flex:3;
+    background-color:#f9fafb;
+    display: flex;
+    flex-direction: column;
+}
+.quotes{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+}
+.quotes p{
+    margin-left: 40px;
+    margin-right: 200px;
+    font-size: 3.5vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
 }
 
 .signupForm{
-    flex:3;
+    flex: 1;
+    background-color: white;
+}
+.button-container{
+    flex: 1;
 }
