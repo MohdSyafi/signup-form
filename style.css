@@ -64,7 +64,7 @@ body{
 }
 
 .signupForm p {
-    margin: 18px;
+    padding-top: 2vh;
     margin-left: 44px;
     color: black;
 }
@@ -149,4 +149,10 @@ a{
 .reminder{
     color: red;
     font-size: 14px;
+}
+
+.display{
+    color: red;
+    font-size: 14px;
+    display: none;
 }

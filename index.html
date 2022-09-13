@@ -15,41 +15,67 @@
         </div>
     </div>
     <div class="signupContainer">
-        <div class="quotes setfont">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started</p>
-            <p>You <em>know</em> you want to.</p>
-        </div>
-        <div class="signupForm">
-            <p class="setfont">Let's do this</p>
-            <div>
-                <fieldset>
-                    <label for="">FIRST NAME</label><input type="text">
-                </fieldset>
-                <fieldset>
-                    <label for="">LAST NAME</label><input type="text">
-                </fieldset>
+        <form action="">
+            <div class="quotes setfont">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started</p>
+                <p>You <em>know</em> you want to.</p>
             </div>
-            <div>
-                <fieldset>
-                    <label for="">EMAIL</label><input type="email">
-                </fieldset>
-                <fieldset>
-                    <label for="">PHONE NUMBER</label><input type="text">
-                </fieldset>
+            <div class="signupForm">
+                <p class="setfont">Let's do this</p>
+                <div>
+                    <fieldset>
+                        <label for="">FIRST NAME</label>
+                        <input type="text" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="">LAST NAME</label>
+                        <input type="text" required>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <label for="">EMAIL</label>
+                        <input type="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="">PHONE NUMBER</label>
+                        <input type="text" required>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <label for="">PASSWORD</label>
+                        <input id="pwd" type="password" required>
+                        <span class=" reminder display">*Password do not match</span>
+                    </fieldset>
+                    <fieldset>
+                        <label for="">CONFIRM PASSWORD</label>
+                        <input id="confirmPwd" type="password" required>
+                    </fieldset>
+                </div>                
             </div>
-            <div>
-                <fieldset>
-                    <label for="">PASSWORD</label><input class="error" type="password"><span class="reminder">*Password do not match</span>
-                </fieldset>
-                <fieldset>
-                    <label for="">CONFIRM PASSWORD</label><input class="error" type="password">
-                </fieldset>
+            <div class="button-container">
+                <button type="submit">Create Account</button>
+                <p class="button-container setfont">Already have an account? <a href="#">Log In</a></p>
             </div>
-        </div>
-        <div class="button-container">
-            <button type="submit">Create Account</button>
-            <p class="button-container setfont">Already have an account? <a href="">Log In</a></p>
-        </div>
+        </form>   
     </div>
+    <script>
+        const submit = document.querySelector("form");
+
+        submit.addEventListener('submit', e => {
+
+            const pwd = document.querySelector('#pwd');
+            const confirmPwd = document.querySelector('#confirmPwd');
+            const reminder = document.querySelector(".reminder");
+
+            if(pwd.value !== confirmPwd.value ){
+                e.preventDefault();
+                pwd.classList.add("error");
+                confirmPwd.classList.add("error");
+                reminder.classList.remove('display');
+            }
+        });
+    </script>
 </body>
 </html>
