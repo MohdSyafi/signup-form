@@ -1,15 +1,42 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+    }
+
 body{
     display: flex;
     padding: 0px;
     margin: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    position: relative;
+    top: 20vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    padding:1vh;
+
+}
+.container img{
+    height: 10vh;
+}
+.container span{
+    font-family: Norse-Bold;
+    font-size: 12vh;
+    color: white;
 }
 
 .imageAndBanner{
-    flex:1;
+    flex:2;
     background-image:url("./images/background.jpg");
-    height: 100vh;
 }
 
 .signupForm{
-    flex:2;
+    flex:3;
 }
